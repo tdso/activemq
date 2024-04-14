@@ -1,0 +1,11 @@
+## Notas do Projeto ActiveMq
+- entrar na pasta /kdi/programas/activemq/apache-activemq-5.16.3/bin e rodar sh activemq console
+- na saida do comando acima copiar o link http://127.0.0.1:8161/ e informar admin/admin 
+- acessar o link manager para consultar/criar as filas e tópicos
+- lembre-se que a fila e o tópico que serão usados nas classes devem ser previamente criados no broker, via console de administração.
+- em seguida deve-se parametrizar no arquivo jndi.properties as filas e os tópicos que foram criados e que serão usados no projeto.
+- o arquivo jndi.properties deve ser baixado no site do vendor.
+- no arquivo jndi.properties, também, configuramos o IP da máquina onde o broker está rodando.
+- Tópico: entrega a mensagem para todos os assinantes (listeners). Para um assinante receber uma mensagem que foi gerada quando estava offline, esse assinante deve ser identificado.
+- Fila: entrega a mensagem para um único assinante (listener) mesmo que haja vários, e se existir várias mensagens faz um load balance distribuindo as mensagens para cada listener ativo.
+- 
